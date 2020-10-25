@@ -14,6 +14,8 @@ import java.math.BigDecimal;
  */
 public class RoundUtil {
 
+    private static final String NUMBER_INVALID = "Указано неверное количество знаков после запятой: ";
+
     /**
      * Округлить значение до определенного количества знаков после разделителя
      * цифр.
@@ -25,6 +27,12 @@ public class RoundUtil {
      * @return округленное значение.
      */
     public static double round(double value, int number, int roundingMode) {
+
+        // Проверка правильности указанного количества знаков после запятой
+        if (number <= 0) {
+            throw new IllegalArgumentException(NUMBER_INVALID + number);
+        }
+
         BigDecimal bd = BigDecimal.valueOf(value);
         bd = bd.setScale(number, roundingMode);
         return bd.doubleValue();

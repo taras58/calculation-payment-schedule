@@ -47,5 +47,5 @@ paymentNumber - Номер платежа
 paymentDate - Дата платежа   
 amountPayment - Сумма платежа  
 principalAmount - Сумма на погашение основного долга  
-interestAmount - Сумма на погашение процентов 
+interestAmount - Сумма на погашение процентов  
 balanceDebt - Остаток задолженности.  

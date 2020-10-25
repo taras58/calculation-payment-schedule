@@ -16,8 +16,6 @@ import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 import ru.neoflex.test.model.LoanParameters;
 import ru.neoflex.test.model.Payments;
-import ru.neoflex.test.utils.AnnuityCalculation;
-import ru.neoflex.test.utils.DifferentialCalculation;
 import ru.neoflex.test.utils.RoundUtil;
 
 /**
