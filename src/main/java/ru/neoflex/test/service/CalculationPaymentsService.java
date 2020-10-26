@@ -14,6 +14,8 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
+import ru.neoflex.test.calculation.AnnuityCalculation;
+import ru.neoflex.test.calculation.DifferentialCalculation;
 import ru.neoflex.test.model.LoanParameters;
 import ru.neoflex.test.model.Payments;
 import ru.neoflex.test.utils.RoundUtil;
@@ -23,7 +25,7 @@ import ru.neoflex.test.utils.RoundUtil;
  *
  * @author alexander
  */
-public class CalculationPayments {
+public class CalculationPaymentsService {
 
     private static final String ANNUITY_TYPE = "аннуитетный";
     private static final String DIFFERENTIATED_TYPE = "дифференцированный";

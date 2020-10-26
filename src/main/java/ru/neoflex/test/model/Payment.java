@@ -22,6 +22,8 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 @XmlAccessorType(XmlAccessType.PROPERTY)
 @XmlSeeAlso(ArrayList.class)
 public class Payment implements Serializable {
+    
+    private static final int NEW_SCALE = 2;
 
     // Номер платежа
     private int paymentNumber;
@@ -37,6 +39,17 @@ public class Payment implements Serializable {
     private double balanceDebt;
 
     public Payment() {
+    }
+
+    public Payment(int paymentNumber, Date paymentDate, double amountPayment,
+            double principalAmount, double interestAmount, double balanceDebt) {
+        this.paymentNumber = paymentNumber;
+        this.paymentDate = paymentDate;
+        this.amountPayment = amountPayment;
+        this.principalAmount = principalAmount;
+        this.interestAmount = interestAmount;
+        this.balanceDebt = balanceDebt;
+
     }
 
     /**

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<loanParameters>
+	<loanAmount>1000</loanAmount>
+	<interestRate>17</interestRate>
+	<loanTerm>12</loanTerm>
+	<loanDate>2020-10-23T03:31:12</loanDate>
+	<loanType>Аннуитетный</loanType>
+</loanParameters>

@@ -2,31 +2,31 @@
 <payments>
     <payment>
         <amountPayment>91.2</amountPayment>
-        <balanceDebt>922.97</balanceDebt>
+        <balanceDebt>922.96</balanceDebt>
         <interestAmount>14.17</interestAmount>
         <paymentDate>2020-11-23T03:31:12Z</paymentDate>
         <paymentNumber>1</paymentNumber>
-        <principalAmount>77.03</principalAmount>
+        <principalAmount>77.04</principalAmount>
     </payment>
     <payment>
         <amountPayment>91.2</amountPayment>
-        <balanceDebt>844.85</balanceDebt>
+        <balanceDebt>844.83</balanceDebt>
         <interestAmount>13.08</interestAmount>
         <paymentDate>2020-12-23T03:31:12Z</paymentDate>
         <paymentNumber>2</paymentNumber>
-        <principalAmount>78.12</principalAmount>
+        <principalAmount>78.13</principalAmount>
     </payment>
     <payment>
         <amountPayment>91.2</amountPayment>
-        <balanceDebt>765.62</balanceDebt>
+        <balanceDebt>765.59</balanceDebt>
         <interestAmount>11.97</interestAmount>
         <paymentDate>2021-01-23T03:31:12Z</paymentDate>
         <paymentNumber>3</paymentNumber>
-        <principalAmount>79.23</principalAmount>
+        <principalAmount>79.24</principalAmount>
     </payment>
     <payment>
         <amountPayment>91.2</amountPayment>
-        <balanceDebt>685.26</balanceDebt>
+        <balanceDebt>685.23</balanceDebt>
         <interestAmount>10.85</interestAmount>
         <paymentDate>2021-02-23T03:31:12Z</paymentDate>
         <paymentNumber>4</paymentNumber>
@@ -34,7 +34,7 @@
     </payment>
     <payment>
         <amountPayment>91.2</amountPayment>
-        <balanceDebt>603.76</balanceDebt>
+        <balanceDebt>603.73</balanceDebt>
         <interestAmount>9.71</interestAmount>
         <paymentDate>2021-03-23T03:31:12Z</paymentDate>
         <paymentNumber>5</paymentNumber>
@@ -42,15 +42,15 @@
     </payment>
     <payment>
         <amountPayment>91.2</amountPayment>
-        <balanceDebt>521.11</balanceDebt>
+        <balanceDebt>521.08</balanceDebt>
         <interestAmount>8.55</interestAmount>
         <paymentDate>2021-04-23T03:31:12Z</paymentDate>
         <paymentNumber>6</paymentNumber>
-        <principalAmount>82.65</principalAmount>
+        <principalAmount>82.66</principalAmount>
     </payment>
     <payment>
         <amountPayment>91.2</amountPayment>
-        <balanceDebt>437.28</balanceDebt>
+        <balanceDebt>437.26</balanceDebt>
         <interestAmount>7.38</interestAmount>
         <paymentDate>2021-05-23T03:31:12Z</paymentDate>
         <paymentNumber>7</paymentNumber>
@@ -58,15 +58,15 @@
     </payment>
     <payment>
         <amountPayment>91.2</amountPayment>
-        <balanceDebt>352.27</balanceDebt>
+        <balanceDebt>352.25</balanceDebt>
         <interestAmount>6.19</interestAmount>
         <paymentDate>2021-06-23T03:31:12Z</paymentDate>
         <paymentNumber>8</paymentNumber>
-        <principalAmount>85.01</principalAmount>
+        <principalAmount>85.02</principalAmount>
     </payment>
     <payment>
         <amountPayment>91.2</amountPayment>
-        <balanceDebt>266.05</balanceDebt>
+        <balanceDebt>266.04</balanceDebt>
         <interestAmount>4.99</interestAmount>
         <paymentDate>2021-07-23T03:31:12Z</paymentDate>
         <paymentNumber>9</paymentNumber>
@@ -74,26 +74,26 @@
     </payment>
     <payment>
         <amountPayment>91.2</amountPayment>
-        <balanceDebt>178.62</balanceDebt>
+        <balanceDebt>178.6</balanceDebt>
         <interestAmount>3.77</interestAmount>
         <paymentDate>2021-08-23T03:31:12Z</paymentDate>
         <paymentNumber>10</paymentNumber>
-        <principalAmount>87.43</principalAmount>
+        <principalAmount>87.44</principalAmount>
     </payment>
     <payment>
         <amountPayment>91.2</amountPayment>
-        <balanceDebt>89.95</balanceDebt>
+        <balanceDebt>89.93</balanceDebt>
         <interestAmount>2.53</interestAmount>
         <paymentDate>2021-09-23T03:31:12Z</paymentDate>
         <paymentNumber>11</paymentNumber>
-        <principalAmount>88.67</principalAmount>
+        <principalAmount>88.68</principalAmount>
     </payment>
     <payment>
-        <amountPayment>91.22</amountPayment>
+        <amountPayment>91.2</amountPayment>
         <balanceDebt>0.0</balanceDebt>
         <interestAmount>1.27</interestAmount>
         <paymentDate>2021-10-23T03:31:12Z</paymentDate>
         <paymentNumber>12</paymentNumber>
-        <principalAmount>89.95</principalAmount>
+        <principalAmount>89.94</principalAmount>
     </payment>
 </payments>

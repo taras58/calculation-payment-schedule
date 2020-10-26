@@ -12,7 +12,7 @@ import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import javax.management.modelmbean.XMLParseException;
 import org.junit.Test;
-import ru.neoflex.test.service.CalculationPayments;
+import ru.neoflex.test.service.CalculationPaymentsService;
 
 /**
  * Тестирование даты получения кредита
@@ -20,6 +20,8 @@ import ru.neoflex.test.service.CalculationPayments;
  * @author alexander
  */
 public class LoanDateTest {
+
+    private final String FILE_NAME_INVALID_TEST = "src/main/resources/invalid.xml";
 
     public LoanDateTest() {
     }
@@ -40,11 +42,10 @@ public class LoanDateTest {
                 + "    <loanTerm>12</loanTerm>"
                 + "    <loanType>Аннуитетный</loanType>"
                 + "</loanParameters>";
-        String fileName = "invalid.txt";
 
-        try (FileOutputStream fos = new FileOutputStream(fileName)) {
+        try (FileOutputStream fos = new FileOutputStream(FILE_NAME_INVALID_TEST)) {
             InputStream stream = new ByteArrayInputStream(xmlString.getBytes(StandardCharsets.UTF_8));
-            CalculationPayments.calculatePaymentPlan(stream, fos);
+            CalculationPaymentsService.calculatePaymentPlan(stream, fos);
             fos.close();
         }
 
@@ -67,11 +68,10 @@ public class LoanDateTest {
                 + "    <loanType>Аннуитетный</loanType>"
                 + "    <loanDate>2020-11-23T03:31</loanDate>"
                 + "</loanParameters>";
-        String fileName = "invalid.txt";
 
-        try (FileOutputStream fos = new FileOutputStream(fileName)) {
+        try (FileOutputStream fos = new FileOutputStream(FILE_NAME_INVALID_TEST)) {
             InputStream stream = new ByteArrayInputStream(xmlString.getBytes(StandardCharsets.UTF_8));
-            CalculationPayments.calculatePaymentPlan(stream, fos);
+            CalculationPaymentsService.calculatePaymentPlan(stream, fos);
             fos.close();
         }
 

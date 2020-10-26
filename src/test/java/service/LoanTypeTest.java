@@ -12,7 +12,7 @@ import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import javax.management.modelmbean.XMLParseException;
 import org.junit.Test;
-import ru.neoflex.test.service.CalculationPayments;
+import ru.neoflex.test.service.CalculationPaymentsService;
 
 /**
  * Тестирование типа расчета платежей кредита
@@ -20,6 +20,8 @@ import ru.neoflex.test.service.CalculationPayments;
  * @author alexander
  */
 public class LoanTypeTest {
+
+    private final String FILE_NAME_INVALID_TEST = "src/main/resources/invalid.xml";
 
     public LoanTypeTest() {
     }
@@ -40,11 +42,10 @@ public class LoanTypeTest {
                 + "    <loanTerm>12</loanTerm>"
                 + "    <loanDate>2020-10-23T03:31:12</loanDate>"
                 + "</loanParameters>";
-        String fileName = "invalid.txt";
 
-        try (FileOutputStream fos = new FileOutputStream(fileName)) {
+        try (FileOutputStream fos = new FileOutputStream(FILE_NAME_INVALID_TEST)) {
             InputStream stream = new ByteArrayInputStream(xmlString.getBytes(StandardCharsets.UTF_8));
-            CalculationPayments.calculatePaymentPlan(stream, fos);
+            CalculationPaymentsService.calculatePaymentPlan(stream, fos);
             fos.close();
         }
 
@@ -67,11 +68,10 @@ public class LoanTypeTest {
                 + "    <loanDate>2020-10-23T03:31:12</loanDate>"
                 + "    <loanType>какойтотип</loanType>"
                 + "</loanParameters>";
-        String fileName = "invalid.txt";
 
-        try (FileOutputStream fos = new FileOutputStream(fileName)) {
+        try (FileOutputStream fos = new FileOutputStream(FILE_NAME_INVALID_TEST)) {
             InputStream stream = new ByteArrayInputStream(xmlString.getBytes(StandardCharsets.UTF_8));
-            CalculationPayments.calculatePaymentPlan(stream, fos);
+            CalculationPaymentsService.calculatePaymentPlan(stream, fos);
             fos.close();
         }
 
@@ -94,11 +94,10 @@ public class LoanTypeTest {
                 + "    <loanDate>2020-10-23T03:31:12</loanDate>"
                 + "    <loanType></loanType>"
                 + "</loanParameters>";
-        String fileName = "invalid.txt";
 
-        try (FileOutputStream fos = new FileOutputStream(fileName)) {
+        try (FileOutputStream fos = new FileOutputStream(FILE_NAME_INVALID_TEST)) {
             InputStream stream = new ByteArrayInputStream(xmlString.getBytes(StandardCharsets.UTF_8));
-            CalculationPayments.calculatePaymentPlan(stream, fos);
+            CalculationPaymentsService.calculatePaymentPlan(stream, fos);
             fos.close();
         }
 

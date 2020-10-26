@@ -19,9 +19,11 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
-import ru.neoflex.test.service.CalculationPayments;
+import ru.neoflex.test.service.CalculationPaymentsService;
 
 public class CalculationPaymentsTest {
+
+    private final String FILE_NAME_INVALID_TEST = "src/main/resources/invalid.xml";
 
     public CalculationPaymentsTest() {
     }
@@ -44,13 +46,13 @@ public class CalculationPaymentsTest {
                 + "    <loanDate>2020-10-23T03:31:12</loanDate>"
                 + "    <loanType>Аннуитетный</loanType>"
                 + "</loanParameters>";
-        String fileName = "annuity.txt";
-        String testFileName = "annuityTest.txt";
+        String fileName = "src/main/resources/annuity.xml";
+        String testFileName = "src/main/resources/annuityTest.xml";
 
         // Расчет платежей и сохранение их в файл
         try (FileOutputStream fos = new FileOutputStream(fileName)) {
             InputStream stream = new ByteArrayInputStream(xmlString.getBytes(StandardCharsets.UTF_8));
-            CalculationPayments.calculatePaymentPlan(stream, fos);
+            CalculationPaymentsService.calculatePaymentPlan(stream, fos);
             fos.close();
         }
 
@@ -91,13 +93,13 @@ public class CalculationPaymentsTest {
                 + "    <loanDate>2020-10-23T03:31:12</loanDate>"
                 + "    <loanType>диФференцированный</loanType>"
                 + "</loanParameters>";
-        String fileName = "differentiated.txt";
-        String testFileName = "differentiatedTest.txt";
+        String fileName = "src/main/resources/differentiated.xml";
+        String testFileName = "src/main/resources/differentiatedTest.xml";
 
         // Расчет платежей и сохранение их в файл
         try (FileOutputStream fos = new FileOutputStream(fileName)) {
             InputStream stream = new ByteArrayInputStream(xmlString.getBytes(StandardCharsets.UTF_8));
-            CalculationPayments.calculatePaymentPlan(stream, fos);
+            CalculationPaymentsService.calculatePaymentPlan(stream, fos);
             fos.close();
         }
 
@@ -134,11 +136,10 @@ public class CalculationPaymentsTest {
                 + "    <loanDate>2020-10-23T03:31:12</loanDate>"
                 + "    <loanType>диФференцированный</loanType>"
                 + "</parameters>";
-        String fileName = "invalid.txt";
 
-        try (FileOutputStream fos = new FileOutputStream(fileName)) {
+        try (FileOutputStream fos = new FileOutputStream(FILE_NAME_INVALID_TEST)) {
             InputStream stream = new ByteArrayInputStream(xmlString.getBytes(StandardCharsets.UTF_8));
-            CalculationPayments.calculatePaymentPlan(stream, fos);
+            CalculationPaymentsService.calculatePaymentPlan(stream, fos);
             fos.close();
         }
 
