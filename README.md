@@ -48,4 +48,9 @@ paymentDate - Дата платежа
 amountPayment - Сумма платежа  
 principalAmount - Сумма на погашение основного долга  
 interestAmount - Сумма на погашение процентов  
-balanceDebt - Остаток задолженности.  
+balanceDebt - Остаток задолженности.   
+
+Пример запуска приложения из папки проекта с указанием входного файла для чтения параметров и выходного файла для вывода результатов   
+```
+java -jar target/calculation-payment-schedule-1.0.jar -i "src/main/resources/input.xml" -o "src/main/resources/output.xml"
+```  
